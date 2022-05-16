@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       function Person(firstName,lastName,age,skills,dateOfbirth,address,married,profession)
+{
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.skills = skills;
+    this.dateOfbirth = dateOfbirth;
+    this.address = address;
+    this.married = married;
+    this.profession = profession;
+}
+Amithabh = new Person("Amithabh","Bacchan",99,['java','c#'],"01/01/1947",{city:"Bangalore",pincode:67856},"false","AnalystA4");
+Abhishek = new Person("Abhishek",55,["html","css"],"05/06/1975","false","JrAnalyst");
+Aaradhya = new Person("Aaradhya",45,"05/01/198","false","software");
+
+var Abhishek = Object.create(Amithabh); 
+var Aaradhya = Object.create(Abhishek);  
+print = function()
+{
+    console.log(Amithabh);
+    console.log(Abhishek.lastName);
+    console.log(Abhishek.address);
+    console.log(Aaradhya.lastName);
+    console.log(Aaradhya.skills);
+    console.log(Aaradhya.address);
+    console.log(Aaradhya.firstName);
+}();
+
+   </script> 
+</body>
+</html>

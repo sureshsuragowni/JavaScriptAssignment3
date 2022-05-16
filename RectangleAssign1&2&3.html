@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Area of Rectangle is:</p>
+    <script>
+        var Rectangle = function(width,height) 
+{
+    this.width = width;
+    this.height = height;
+    this.area = function()
+    {
+        console.log("Area of  Rectangle is : " +this.width * this.height);
+    }
+} 
+
+var myRect1 = new Rectangle(5,10); 
+var myRect2 = new Rectangle(20,10);
+
+
+console.log("Width is" + myRect1.width); //calling objects' properties
+console.log("Height is" + myRect1.height);
+myRect1.area();
+console.log('  ');
+console.log("Width is" + myRect2.width); 
+console.log("Height is" + myRect2.height);
+myRect2.area();
+
+//2)  prototype property(assignment2)
+
+Rectangle.prototype.getArea = function()
+{
+    console.log("Area using prototype property : " +this.width * this.height);
+}
+
+console.log(Rectangle.prototype);
+myRect1.getArea(); 
+myRect2.getArea();
+
+// Assignment3
+Rectangle.prototype.getAreaForRect = function(width,height)  
+{
+    console.log("Area using prototype property : " +width * height);
+}
+
+console.log(Rectangle.prototype);
+myRect1.getAreaForRect(4,5); 
+
+
+   </script>
+</body>
+</html>

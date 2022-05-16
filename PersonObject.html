@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(firstName,lastName,age,skills,dateOfbirth,address,married,profession)
+{
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.skills = skills;
+    this.dateOfbirth = dateOfbirth;
+    this.address = address;
+    this.married = married;
+    this.profession = profession;
+};
+
+Person1 = new Person("Suresh","Gowd",21,['Dotnet','Sql#'],"11/2/1995",{city:"Bangalore",pincode:515001},"unmarried","Software");
+Person2 = new Person("Viswanath","Gowda",22,["Html","TYpescript"],"22/05/1998",{city:"karnataka",pincode:512004},"Married","Software");
+
+console.log(Person1);
+console.log(Person2);
+
+print=function()       
+{
+    console.log(Person1);
+    console.log(Person2);
+}();
+
+        </script>
+</body>
+</html>
